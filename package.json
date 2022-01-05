@@ -4,8 +4,16 @@
   "author": "Loïc Nicolas <loicnico96@gmail.com>",
   "license": "MIT",
   "packageManager": "yarn@3.1.1",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "private": true,
+  "bugs": "https://github.com/loicnico96/algorand-tools",
+  "homepage": "https://github.com/loicnico96/algorand-tools#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loicnico96/algorand-tools"
+  },
   "scripts": {
     "all": "yarn workspaces foreach -vpi --exclude @algorand-tools run",
     "build": "yarn workspaces foreach -vpi --exclude @algorand-tools --topological-dev run build",
