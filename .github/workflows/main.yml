@@ -1,0 +1,55 @@
+name: CI
+
+on: [ pull_request, push ]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    strategy:
+      matrix:
+        language: [javascript]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: ${{ matrix.language }}
+      - name: Build application
+        uses: github/codeql-action/autobuild@v1
+      - name: Perform CodeQL analysis
+        uses: github/codeql-action/analyze@v1
+
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Get Yarn cache directory
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+      - name: Use Yarn cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Run Prettier
+        run: yarn all format:check
+      - name: Run ESLint
+        run: yarn all lint
+      - name: Build application
+        run: yarn build
+      - name: Run tests
+        run: yarn all test:coverage --passWithNoTests
