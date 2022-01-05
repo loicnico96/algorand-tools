@@ -1,0 +1,10 @@
+# dependencies
+/node_modules
+
+# yarn
+.yarn/cache
+.yarn/install-state.gz
+
+# debug
+yarn-debug.log*
+yarn-error.log*
