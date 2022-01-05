@@ -1,6 +1,7 @@
 import { Theme, ThemeProvider as BaseThemeProvider } from "@emotion/react"
-import { ReactNode, useState } from "react"
+import { useState } from "react"
 import { GlobalStyle } from "./GlobalStyle"
+import { ProviderProps } from "../types"
 
 declare module "@emotion/react" {
   export interface Theme {
@@ -22,10 +23,6 @@ export const defaultTheme: Theme = {
     "Helvetica Neue",
     "sans-serif",
   ],
-}
-
-export interface ProviderProps {
-  children: ReactNode
 }
 
 export function ThemeProvider({ children }: ProviderProps) {
