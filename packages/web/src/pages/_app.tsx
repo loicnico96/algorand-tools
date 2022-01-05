@@ -1,8 +1,13 @@
-import "../styles/globals.css"
-import type { AppProps } from "next/app"
+import { AppProps } from "next/app"
+import { ErrorBoundary } from "components/ErrorBoundary"
+import { ThemeProvider } from "context/theme/ThemeProvider"
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <ErrorBoundary>
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </ErrorBoundary>
+  )
 }
-
-export default MyApp
