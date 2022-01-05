@@ -5,9 +5,13 @@
   "packageManager": "yarn@3.1.1",
   "private": true,
   "scripts": {
-    "precommit": "",
-    "prepare": "husky install"
+    "precommit": "yarn workspaces foreach -v --exclude @algorand-tools run precommit",
+    "prepare": "husky install",
+    "web": "yarn workspace @algorand-tools/web"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "husky": "7.0.4"
   }

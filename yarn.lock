@@ -5,6 +5,12 @@ __metadata:
   version: 5
   cacheKey: 8
 
+"@algorand-tools/web@workspace:packages/web":
+  version: 0.0.0-use.local
+  resolution: "@algorand-tools/web@workspace:packages/web"
+  languageName: unknown
+  linkType: soft
+
 "@algorand-tools@workspace:.":
   version: 0.0.0-use.local
   resolution: "@algorand-tools@workspace:."

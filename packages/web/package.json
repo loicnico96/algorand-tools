@@ -1,0 +1,9 @@
+{
+  "name": "@algorand-tools/web",
+  "version": "0.0.0",
+  "author": "Loïc Nicolas <loicnico96@gmail.com>",
+  "private": true,
+  "scripts": {
+    "precommit": ""
+  }
+}
