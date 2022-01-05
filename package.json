@@ -3,15 +3,16 @@
   "version": "0.0.0",
   "author": "Loïc Nicolas <loicnico96@gmail.com>",
   "packageManager": "yarn@3.1.1",
+  "workspaces": ["packages/*"],
   "private": true,
   "scripts": {
+    "all": "yarn workspaces foreach -vpi --exclude @algorand-tools run",
+    "build": "yarn workspaces foreach -vpi --exclude @algorand-tools --topological-dev run build",
+    "deploy": "vercel",
     "precommit": "yarn workspaces foreach -v --exclude @algorand-tools run precommit",
     "prepare": "husky install",
     "web": "yarn workspace @algorand-tools/web"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "husky": "7.0.4"
   }

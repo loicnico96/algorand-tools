@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "lib": [
+      "dom",
+      "dom.iterable"
+    ],
+    "incremental": true,
+    "jsx": "preserve",
+    "noEmit": true,
+  },
+  "include": [
+    "next-env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ]
+}
