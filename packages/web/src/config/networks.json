@@ -1,0 +1,38 @@
+{
+  "mainnet": {
+    "algo_api": {
+      "port": "",
+      "url": "https://algoexplorerapi.io",
+      "token": ""
+    },
+    "algo_explorer": {
+      "url": "https://algoexplorer.io"
+    },
+    "algo_indexer": {
+      "port": "",
+      "url": "https://algoexplorerapi.io/idx2",
+      "token": ""
+    },
+    "walletconnect": {
+      "bridge": "https://bridge.walletconnect.org"
+    }
+  },
+  "testnet": {
+    "algo_api": {
+      "port": "",
+      "url": "https://testnet.algoexplorerapi.io",
+      "token": ""
+    },
+    "algo_explorer": {
+      "url": "https://testnet.algoexplorer.io"
+    },
+    "algo_indexer": {
+      "port": "",
+      "url": "https://testnet.algoexplorerapi.io/idx2",
+      "token": ""
+    },
+    "walletconnect": {
+      "bridge": "https://bridge.walletconnect.org"
+    }
+  }
+}
