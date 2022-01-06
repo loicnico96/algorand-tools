@@ -17,7 +17,7 @@ __metadata:
     "@types/react": 17.0.38
     "@walletconnect/client": 1.7.0
     algorand-walletconnect-qrcode-modal: 1.6.1
-    algosdk: ^1.13.0-beta.2
+    algosdk: 1.13.0-beta.2
     eslint: 8.6.0
     eslint-config-next: 12.0.7
     jest: 27.4.7
@@ -26,6 +26,7 @@ __metadata:
     prettier: 2.5.1
     react: 17.0.2
     react-dom: 17.0.2
+    swr: 1.1.2
     typescript: 4.5.4
   languageName: unknown
   linkType: soft
@@ -1707,7 +1708,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"algosdk@npm:^1.13.0-beta.2":
+"algosdk@npm:1.13.0-beta.2":
   version: 1.13.0-beta.2
   resolution: "algosdk@npm:1.13.0-beta.2"
   dependencies:
@@ -7434,6 +7435,15 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 53b1e247e68e05db7b3808b99b892bd36fb096e6fba213a06da7fab22045e97597db425c724f2bbd6c99a3c295e1e73f3e4de78592289f38431049e1277ca0ae
+  languageName: node
+  linkType: hard
+
+"swr@npm:1.1.2":
+  version: 1.1.2
+  resolution: "swr@npm:1.1.2"
+  peerDependencies:
+    react: ^16.11.0 || ^17.0.0 || ^18.0.0
+  checksum: 84bf222c667bf4f94bf9bcaf51f11443d69eb6feb82649c06ef8e576c51f52269872dbda4b926f267fd79cfeaf7bd84c6a62d519db25fe2af1fb811e75163e94
   languageName: node
   linkType: hard
 
