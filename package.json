@@ -20,6 +20,7 @@
     "deploy": "vercel",
     "precommit": "yarn workspaces foreach -v --exclude @algorand-tools run precommit",
     "prepare": "husky install",
+    "teal": "yarn workspace @algorand-tools/teal",
     "web": "yarn workspace @algorand-tools/web"
   },
   "devDependencies": {

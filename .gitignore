@@ -1,5 +1,5 @@
 # dependencies
-/node_modules
+node_modules
 
 # yarn
 .yarn/cache
@@ -9,4 +9,10 @@
 yarn-debug.log*
 yarn-error.log*
 
+# vercel
 .vercel
+
+# packages
+/packages/*/build
+/packages/*/coverage
+/packages/*/dist
